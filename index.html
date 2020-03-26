@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Crummy Indeed</title>
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="fonts/stylesheet.css" rel="stylesheet">
+  <style type="text/css">
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'glacial_indifferenceregular';
+      font-size: 1.25rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+
+    section {
+      /*127767*/
+      background-color: #d9d9d9;
+      background-image: linear-gradient(to bottom right, #d9d9d9, #127767);
+      min-height: 100%;
+    }
+
+    section.alt {
+      background-image: linear-gradient(to bottom left, #127767, #d9d9d9);
+    }
+
+    #header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      font-weight: bold;
+      color: white;
+    }
+
+    #header h1 {
+      font-family: 'Alegreya Sans SC', sans-serif;
+    }
+
+    #overlay {
+      background-image: url(bgdust5.png);
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 1;
+    }
+
+    .banner {
+      display: inline-block;
+      font-size: 10rem;
+      padding: 0;
+      border-bottom: 1rem white solid;
+      margin: 0 auto;
+      z-index: 10;
+      position: relative;
+    }
+
+    .tagline {
+      font-size: 2rem;
+      z-index: 10;
+      position: relative;
+    }
+
+    .wrapper {
+      min-height: 100%;
+      width: 95%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2.underlined {
+      border-bottom: .5rem solid #e1c340;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    hr {
+      border: .25rem solid #e1c340;
+      width: 40rem;
+    }
+
+    .third.column {
+      float: left;
+      width: 30%;
+      margin-right: 5%;
+    }
+
+    .third.column:last-child {
+      margin-right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="header">
+    <div id="overlay"> </div>
+    <h1 class="banner">Crummy Indeed</h1>
+    <p class="tagline">Building the web that was meant to be.</p>
+  </section>
+  <section class="alt">
+    <div class="wrapper">
+      <div class="row" style="text-align: center;">
+        <h2>Your Web</h2>
+        <hr>
+        <h1>Your Way</h1>
+      </div>
+      <div class="row">
+        <div class="column third">
+          <h3>The way it was meant to be.</h3>
+          <p>The call for a more distributed web has never been stronger. Whether it's individual concerns around privacy,
+            censorship and centralized power or corporate concerns around stability, scalability and security people are moving <strong></strong>away</strong>
+            from the current monolithic services of today and <strong>toward</strong> a pattern of "connected autonomy" that's more reminiscent
+            of the original vision of the "world wide web".</p>
+          <p>
+            We buid the tools, services, frameworks and applications that support that movement. We aim to bring distributed, decentralized
+            technology to the massed by making it accessible, affordable and easily deployable. Whether you need freedom or fault-tolerance,
+            in the cloud or on the edge - we've got your back.
+          </p>
+        </div>
+        <div class="column third">
+        </div>
+        <div class="column third">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+
+  </section>
+  <script type="text/javascript">
+    var overlay = document.getElementById('overlay');
+    var banner = document.querySelector('.banner');
+    var tagline = document.querySelector('.tagline');
+    window.onscroll = function () {
+      if (window.pageYOffset > 0) {
+        var height = window.innerHeight;
+        var percent = (window.innerHeight - (window.pageYOffset * 2)) / window.innerHeight;
+        var opac = 1 * percent;
+        overlay.style.opacity = opac;
+        banner.style.bottom = window.pageYOffset + 'px';
+        tagline.style.bottom = window.pageYOffset + 'px';
+      }
+    };
+  </script>
+</body>
+
+</html>
